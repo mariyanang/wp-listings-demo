@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <!-- if you remove this meta tag, the NSA will spy on you through your Xbox Kinect camera -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>МПТ06 | Контакти</title>
+    <link rel="stylesheet" href="stylesheets/app.css"/>
+    <link href="//fonts.googleapis.com/css?family=Philosopher:400italic,400,700italic,700" rel="stylesheet"
+          type="text/css">
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initialize() {
+            var mapCanvas = document.getElementById('map_canvas');
+            var myLatlng = new google.maps.LatLng(42.151241, 24.746173);
+            var mapOptions = {
+                center: myLatlng,
+                zoom: 17,
+                scrollwheel: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions)
+
+            // Creating a marker and positioning it on the map
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: "МПТ'06 офис"
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+
+    </script>
+</head>
+<body>
+<header class="alignCenter">
+    <a href="http://mariyana.net/mpt06"><div class="logo alignCenter"></div></a>
+    <nav class="row">
+        <ul>
+            <li><a href="index.html">Имоти</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="news.html">Новини</a></li>
+        </ul>
+    </nav>
+</header>
+<hgroup class="fullWidth hgroup"></hgroup>
+<main role="main">
+    <div class="panel">
+    <div class="rowBigPaddingTop fullWidth">
+        <section class="small-12 medium-3 column alignCenter">
+            <h1 class="row">Телефони</h1><br/>
+                <p> Офис: 032 260 885<br/>
+                    Факс: 032 260 885<br/>
+                    Информация:<br/>
+                    Мариана 0899 870 430<br/>
+                    Петя 0898 366 625<br/>
+                    Тодор 0898 959 107
+                </p>
+        </section>
+        <section class="small-12 medium-6 column alignCenter">
+            <h1 class="row">За фирмата</h1><br/>
+            <article>
+                <p>Добре дошли в сайта на брокерска къща МПТ 2006. Фирмата е разположена в гр. Пловдив и предлага богата
+                    гама от различни по вид и разположение имоти както за продан така и за наем.</p>
+
+                <p>Фирмата съдейства за кредити от общо 13 банки, благодарение на сътрудничеството си с Кредит
+                    център.</p>
+            </article>
+        </section>
+        <section class="small-12 medium-3 column">
+            <h1 class="row">Запитване</h1><br/>
+
+            <p>Емейл: office@mpt06.com</p>
+
+            <form>
+                <label>Вашият емайл</label>
+                <input type="text" placeholder="Емейл"/>
+                <label>Вашето запитване</label>
+                <textarea placeholder="Запитване"></textarea>
+                <button class="fullWidth">Изпратете</button>
+            </form>
+        </section>
+    </div>
+        </div>
+    <section class="rowBigPaddingTop alignCenter fullWidth">
+        <article class="small-12 column">
+            <h1 class="row">Адрес</h1><br/>
+
+            <p>"Дом Левски", ул. Райко Даскалов 53, етаж 2, офис 24
+                4000 Пловдив
+            </p>
+        </article>
+        <div id="map_canvas"></div>
+    </section>
+</main>
+<footer>
+    <h6>Copyright | Admin Login</h6>
+</footer>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/foundation/js/foundation.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>

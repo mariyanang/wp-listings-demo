@@ -1,0 +1,197 @@
+@mixin ulLinks($text-transform, $font-size) {
+  a {
+    color: $body-bg;
+    text-decoration: none;
+    text-transform: $text-transform;
+    font-size: $font-size;
+    font-weight: 200;
+    letter-spacing: .1rem;
+    border-bottom: 1px solid;
+    border-bottom-color: rgba($white, 0);
+    border-radius: 2px;
+    padding: 5px;
+    text-shadow: 0px 0px 4px $white;
+    transition: border-bottom-color 0.5s ease-in 0s, color 0.5s ease-out 0s;
+  }
+  a:hover, a:active, a:focus {
+    border-bottom-color: rgba($white, 1);
+    color: $white;
+  }
+}
+
+@mixin logo($margin, $width, $height) {
+  display: inline-block;
+  float: left;
+  background: url(../images/logo/mpt06-logo-white.png) center no-repeat;
+  background-size: 100%;
+  opacity: .8;
+  margin: $margin;
+  width: $width;
+  height: $height;
+}
+
+@mixin scrollHeader($height, $text-align, $line-height) {
+  display: inline-block;
+  position: fixed;
+  height: $height;
+  padding: 0 auto;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($alert-color, .8);
+  z-index: 4;
+  ul {
+    @include ulLinks(inherit, 1rem);
+    text-align: $text-align;
+    line-height: $line-height;
+  }
+  ul li {
+    padding-right: 2%;
+  }
+
+}
+
+@mixin listing ($bgUrl, $padding){
+  position: relative;
+  background: url('../images/test-photo-copy.png') no-repeat scroll center bottom / cover transparent;
+  background-color: rgba($secondary-color, .5);
+  background-blend-mode: screen;
+  box-shadow: 0px 0px 40px 20px rgba(78, 79, 94, 0.8) inset;
+  padding: $padding;
+  a {
+    @include ulLinks(inherit, 1rem);
+  }
+  a:hover {
+
+  }
+  h2, h3, h6, a, hr {
+    color: $vapor;
+    font-weight: 300;
+  }
+  hr{
+    width: 80%;
+    margin-left: 10%;
+    padding: 10% auto;
+  }
+}
+
+.rowBigPaddingTop {
+  @include grid-row();
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.fullWidth {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fullHeight {
+  height: 100%;
+  overflow: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.fixedHeight {
+  margin-top: 12%;
+  overflow: hidden;
+}
+
+@media #{$medium-up} {
+  .fixedHeight {
+    margin-top: 0;
+    position: absolute;
+    height: 90%;
+    top: 10%;
+
+  }
+}
+
+.panel {
+  background-color: $panel-bg;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+}
+
+@mixin panel {
+  background-color: #{$ghost};
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+}
+
+.transparent {
+  @include panel();
+  background-color: $body-bg;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.floatLeft {
+  position: absolute;
+  float: left;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.alignToCheckbox {
+  padding: 0 0 5px 20px;
+  margin-top: -5px;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+.ellipsis.multiline {
+  white-space: normal;
+}
+
+.alignToInput {
+  margin-top: 42px;
+}
+
+@media #{$medium-up} {
+  .alignToInput {
+    margin-top: 49px;
+  }
+}
+
+.withBg {
+  background-color: $panel-bg;
+}
+
+.svgFallback {
+  display: none;
+  width: 100%;
+  margin-top: -15px;
+}
+
+@media #{$medium-up} {
+  .svgFallback {
+    margin-top: 48px;
+  }
+}
+
+@media #{$large-up} {
+  .svgFallback {
+    margin-top: 83px;
+  }
+}
+@media #{$xlarge-up} {
+  .svgFallback {
+    margin-top: 54px;
+  }
+}

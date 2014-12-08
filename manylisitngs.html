@@ -1,0 +1,315 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <!-- if you remove this meta tag, the NSA will spy on you through your Xbox Kinect camera -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>МПТ06 | Имоти</title>
+    <link rel="stylesheet" href="stylesheets/app.css"/>
+    <link href="//fonts.googleapis.com/css?family=Philosopher:400italic,400,700italic,700" rel="stylesheet"
+          type="text/css">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script>
+        function initialize() {
+            var mapCanvas = document.getElementById('map_canvas');
+            var myLatlng = new google.maps.LatLng(42.151241, 24.746173);
+            var mapOptions = {
+                center: myLatlng,
+                zoom: 10,
+                scrollwheel: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions)
+
+            // Creating a marker and positioning it on the map
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: "МПТ'06 офис"
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+
+    </script>
+
+</head>
+<body>
+<header id="searchResultsHeader">
+    <a href="http://mariyana.net/mpt06">
+        <div class="logo"></div>
+    </a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Имоти</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="news.html">Новини</a></li>
+        </ul>
+    </nav>
+</header>
+<main role="main" class="fixedHeight fullWidth">
+<section id="refineSearch" class="small-12 medium-3 column fullHeight">
+
+    <div id="accordion">
+
+        <h3 class="row">Вид на имота<i class="icon-direction-down"></i></h3>
+
+        <div class="row">
+
+            <div class="row">
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="апартамент" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="апартамент">апартамент</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="мезонет" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="мезонет">мезонет</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="стая" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="стая">стая</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="таван" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="таван">таван</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="мазе" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="мазе">мазе</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="ателие" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="ателие">ателие</div>
+                </label>
+            </div>
+
+            <div class="row">
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="офис" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="офис">офис</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="магазин" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="магазин">магазин</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="заведение" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="заведение">заведение</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="хотел" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="хотел">хотел</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="промишлено" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="промишлено">промишлено помещение</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="склад" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="склад">склад</div>
+                </label>
+            </div>
+
+            <div class="row">
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="къща" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="къща">къща</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="етаж" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="етаж">етаж</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="вила" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="вила">вила</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="парцел" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="парцел">парцел</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="земеделска" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="земеделска">земеделска земя</div>
+                </label>
+                <label class="checkbox small-6 large-4 column">
+                    <input type="checkbox" name="listingType" value="гараж" class="floatLeft">
+
+                    <div class="alignToCheckbox ellipsis" title="гараж">гараж</div>
+                </label>
+            </div>
+
+            <hr/></div>
+
+
+        <h3 class="row">Квадратура<i class="icon-direction-down"></i></h3>
+
+        <div class="row">slider<hr/></div>
+
+
+        <h3 class="row">Брой стаи<i class="icon-direction-down"></i></h3>
+
+        <div class="row">number of rooms<hr/></div>
+
+
+        <h3 class="row">Състояние на строежа<i class="icon-direction-down"></i></h3>
+
+        <div class="row">
+            <label class="checkbox small-6 column">
+                <input type="checkbox" name="listingType" value="ново" class="floatLeft">
+
+                <div class="alignToCheckbox ellipsis" title="ново">ново строителство</div>
+            </label>
+            <label class="checkbox small-6 column">
+                <input type="checkbox" name="listingType" value="построена" class="floatLeft">
+
+                <div class="alignToCheckbox ellipsis" title="построена">построена</div>
+            </label>
+            <hr/>
+        </div>
+
+
+        <h3 class="row">Публикувана на<i class="icon-direction-down"></i></h3>
+
+        <div class="row">date of listing<hr/></div>
+
+
+        <h3 class="row">Екстри<i class="icon-direction-down"></i></h3>
+
+        <div class="row">
+            <label class="checkbox small-6 large-4 column">
+                <input type="checkbox" name="listingType" value="гараж" class="floatLeft">
+
+                <div class="alignToCheckbox ellipsis" title="гараж">гараж</div>
+            </label>
+            <label class="checkbox small-6 large-4 column">
+                <input type="checkbox" name="listingType" value="двор" class="floatLeft">
+
+                <div class="alignToCheckbox ellipsis" title="двор">двор</div>
+            </label>
+            <label class="checkbox small-6 large-4 column">
+                <input type="checkbox" name="listingType" value="асансиор" class="floatLeft">
+
+                <div class="alignToCheckbox ellipsis" title="асансиор">асансьор</div>
+            </label>
+            <label class="checkbox small-6 large-4 column">
+                <input type="checkbox" name="listingType" value="тераса" class="floatLeft">
+
+                <div class="alignToCheckbox ellipsis" title="тераса">тераса</div>
+            </label>
+            <label class="checkbox small-6 large-4 column">
+                <input type="checkbox" name="listingType" value="парно" class="floatLeft">
+
+                <div class="alignToCheckbox ellipsis" title="парно">парно</div>
+            </label>
+            <label class="checkbox small-6 large-4 column">
+                <input type="checkbox" name="listingType" value="изолация" class="floatLeft">
+
+                <div class="alignToCheckbox ellipsis" title="изолация">изолация</div>
+            </label>
+            <label class="checkbox small-6 large-4 column">
+                <input type="checkbox" name="listingType" value="туха" class="floatLeft">
+
+                <div class="alignToCheckbox ellipsis" title="туха">туха</div>
+            </label>
+            <label class="checkbox small-6 large-4 column">
+                <input type="checkbox" name="listingType" value="панел" class="floatLeft">
+
+                <div class="alignToCheckbox ellipsis" title="панел">панел</div>
+            </label>
+            <label class="checkbox small-6 large-4 column">
+                <input type="checkbox" name="listingType" value="паркинг" class="floatLeft">
+
+                <div class="alignToCheckbox ellipsis" title="паркинг">паркинг</div>
+            </label>
+        </div>
+
+    </div>
+    <button class="button large fullWidth">Потърси наново</button>
+</section>
+<section id="searchResultLisitngs" class="small-12 medium-6 column alignCenter">
+    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+        <li>
+            <a href="#">
+                <div class="row lisitng">
+                    <a class="small-6 column"><h6>♡ Запази</h6></a>
+                    <h6 class="small-6 column">Статус</h6>
+
+                    <h3 class="small-12 column">Вид на имота</h3>
+                    <h6 class="small-12 column">В Квартал на Град</h6>
+
+                    <h2 class="small-12 column">23 000лв</h2>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="row lisitng">
+                    <a class="small-6 column"><h6>♡ Запази</h6></a>
+                    <h6 class="small-6 column">Статус</h6>
+
+                    <h3 class="small-12 column">Вид на имота</h3>
+                    <h6 class="small-12 column">В Квартал на Град</h6>
+
+                    <h2 class="small-12 column">23 000лв</h2>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="row lisitng">
+                    <a class="small-6 column"><h6>♡ Запази</h6></a>
+                    <h6 class="small-6 column">Статус</h6>
+
+                    <h3 class="small-12 column">Вид на имота</h3>
+                    <h6 class="small-12 column">В Квартал на Град</h6>
+
+                    <h2 class="small-12 column">23 000лв</h2>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="pagination row alignCenter">
+        <li class="arrow unavailable"><a href="">&laquo;</a></li>
+        <li class="current"><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li class="unavailable"><a href="">&hellip;</a></li>
+        <li><a href="">12</a></li>
+        <li><a href="">13</a></li>
+        <li class="arrow"><a href="">&raquo;</a></li>
+    </ul>
+</section>
+<section id="mapListings" class="small-12 medium-3 column alignCenter">
+    <div id="map_canvas"></div>
+</section>
+</main>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="bower_components/foundation/js/foundation.min.js"></script>
+<script src="bower_components/Snap.svg/dist/snap.svg-min.js"></script>
+<script src="http://cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js"></script>
+<script src="js/adaptor3dSlider/js/box-slider-all.jquery.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>
