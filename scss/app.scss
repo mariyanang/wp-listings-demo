@@ -1,5 +1,5 @@
 @import "settings";
-@import "foundation";
+@import "../bower_components/foundation/scss/foundation";
 
 // Or selectively include components
 // @import
@@ -38,3 +38,331 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+//Preliminary css from the mockup
+//TODO refactor
+
+/*@import url(http://fonts.googleapis.com/css?family=Lato);*/
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+html {
+  font: 1em/1.5 "Philosopher", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+  color: #444;
+}
+
+body {
+  font-size: 1.3em;
+}
+
+header {
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+  /*background: url(https://dl.dropboxusercontent.com/u/16657557/scripts/blur/bg.jpg) center no-repeat; *//* Image Credit: Unsplash.me */
+  /*background-size: cover;*/
+  background-color: #aaa;
+  color: #fff;
+  h1, h2{
+    color: #fff;
+  }
+  .logo {
+    position: absolute;
+    width: 10%;
+    height: 100px;
+    background: url(../images/logo/mpt06-logo-white.png) center no-repeat;
+    background-size: cover;
+  }
+
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+
+
+ul {
+  list-style-type: none;
+  width: 50%;
+  float: right;
+}
+
+ul li {
+  display: inline;
+  padding-right: 5%;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+button {
+  border: none;
+  color: #fff;
+}
+
+.hgroup {
+  /*@include transform(translate(- 50 %, - 50 %));*/
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 5px solid #fff;
+  padding: .5em 3em;
+  background-color: rgba(0, 0, 0, .2);
+  z-index: 3;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: url(https://dl.dropboxusercontent.com/u/16657557/scripts/blur/bg-blurred.jpg) center no-repeat;
+  background-size: cover;
+  z-index: 0;
+  opacity: 0;
+}
+
+.site {
+  padding: 20em 0;
+  text-align: center;
+  background-color: #efefef;
+  font-size: .8em;
+  color: #444;
+  width: 100%;
+  display: inline-block;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: crimson;
+}
+
+section {
+  display: inline-block;
+  text-align: center;
+}
+
+#searchProperties {
+  width: 80%;
+  margin: 0% 10% 0% 10%;
+}
+
+h3 {
+  display: block;
+}
+
+h4 {
+  display: inline;
+}
+
+.numInput {
+  width: 150px;
+}
+
+.listingsRow {
+  width: 60%;
+  margin: 0% 20% 0% 20%;
+}
+
+.thumbnail {
+  width: 28%;
+  margin: 1% 1%;
+  height: 200px;
+  display: inline-block;
+  background-color: #fafafa;
+}
+
+footer {
+  margin-top: 2%;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+/*
+Contact page styles
+*/
+
+.columns3 {
+  width: 23%;
+  margin: 0% 1%;
+  display: inline-block;
+  float: left;
+}
+
+#about {
+  width: 50%;
+  margin: 0% 0%;
+  box-shadow: 0 0 7px #999;
+  z-index: 1;
+}
+
+#map_canvas {
+  width: 100%;
+  display: inline-block;
+  height: 400px;
+}
+
+.columns1 {
+  width: 100%;
+  display: inline-block;
+}
+
+form input, form textarea, form button {
+  display: inline-block;
+  float: left;
+  width: 70%;
+  margin: 0% 0% 1% 15%;
+}
+
+/*
+Many Listings page styles
+*/
+
+#smallHeader {
+  height: 10%;
+  background: #999;
+}
+
+#refineSearch {
+  position: absolute;
+  width: 25%;
+  top: 10%;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+}
+
+#newSearch {
+  width: 100%;
+}
+
+#searchResults {
+  position: absolute;
+  width: 50%;
+  top: 10%;
+  left: 25%;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 7px #999;
+  z-index: 1;
+}
+
+#mapListings {
+  position: absolute;
+  width: 25%;
+  top: 10%;
+  left: 75%;
+  right: 0;
+  bottom: 0;
+}
+
+#mapListings #map_canvas {
+  position: fixed;
+  display: block;
+  height: 100%;
+}
+
+/*
+Single Listing page styles
+*/
+#listingHgroup {
+  position: absolute;
+  width: 40%;
+  text-align: center;
+  padding-right: 6em;
+}
+
+#listingHgroup h2 {
+  margin: 0;
+}
+
+#scrollHeader {
+  /*display: none;*/
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  top: 0;
+}
+
+.navArrow {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  width: 10%;
+  text-align: center;
+}
+
+#leftArrow {
+  left: 0;
+}
+
+#rightArrow {
+  left: 90%;
+}
+
+#leftHeading {
+  text-align: left;
+}
+
+#rightHeading {
+  text-align: right;
+}
+
+#images {
+  width: 40%;
+  height: 400px;
+  margin-left: 30%;
+  background-color: #fafafa;
+}
+
+/*
+News page styles
+*/
+
+aside {
+  width: 20%;
+  margin-left: 20%;
+  display: inline-block;
+  float: left;
+  position: fixed;
+  height: 100%;
+}
+
+.postArticles {
+  width: 40%;
+  margin-right: 20%;
+  margin-left: 40%;
+  display: inline-block;
+
+}
